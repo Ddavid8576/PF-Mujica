@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0 auto;
+    font-family: 'Lato';
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 150px;
+  }
+  
+  .navbar {
+    background-color: rgba(230, 149, 43, 0.689);
+  }
+  
+  .nav-link {
+    color: #fff !important;
+    font-size: 20px;
+    text-shadow: 0 0 5px #000;
+  
+    &:hover {
+      color: #000 !important;
+      font-weight: 300;
+    }
+  }
+  
+  .slide img {
+    height: 600px;
+  }
+  
+  h4 {
+    text-align: center;
+    background-color: rgba(230, 149, 43, 0.689);
+    padding: 30px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 5px #000;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    img {
+      height: 300px;
+    }
+  
+    background-color: rgba(230, 149, 43, 0.737);
+    color: #fff !important;
+  
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+  
+      h5 {
+        color: #000;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  .nleft {
+    opacity: 0.9;
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    margin-top: 60px;
+  }
+  
+  .nright {
+    margin-top: 60px;
+    background-color: rgba(12, 1, 1, 0.429);
+    color: #fff;
+  }
+  
+  .descripcion li {
+    font-size: 20px;
+  }
+  
+  .price {
+    font-size: 20px;
+    font-weight: 900;
+  }
+  
+  .btn-dark:hover {
+    color: rgb(230, 149, 43);
+  }
+  
+  #Contacto {
+    form label {
+      font-weight: 700;
+      color: #fff;
+      font-size: 25px;
+    }
+  
+    h2 {
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+  
+  footer {
+    background-color: rgba(0, 0, 0, 0.895);
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+  
+    p {
+      margin-bottom: 20px;
+    }
+  
+    .redes {
+      a {
+        text-decoration: none;
+      }
+  
+      i {
+        color: orange;
+        font-size: 40px;
+        letter-spacing: 30px;
+  
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  
