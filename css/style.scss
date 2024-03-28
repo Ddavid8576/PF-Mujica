@@ -1,16 +1,59 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+  font-family: 'VW Head Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/VWHeadRegular.woff) format('woff');
   }
   
-  body {
-    background-image: url(../img/fondo.jpg);
+  @font-face {
+  font-family: 'VW Head Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url( ../fonts/VWHeadBold.woff) format('woff');
+  }
+
+  @font-face {
+    font-family: 'VW Text Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/VWTextRegular.woff) format('woff');
+    }
+    
+
+    @font-face {
+    font-family: 'VW Text Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/VWTextBold.woff) format('woff');
+    }
+
+    //Inicio Variables variables
+    $colores: (
+    "blanco" : #fff,
+    "negro" : #000,
+    "naranja" : orange,
+    "naranjat" : rgba(230, 149, 43, 0.737)
+    );
+    $fuentes: (
+    "normal" : 'VW Text Regular',
+    "normalb" : 'VW Text Bold',
+    "titulo" : 'VW Head Regular',
+    "titulob" : 'VW Head Bold'
+    );
+    // Variables fin
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+    body {
+    background-image: url(../img/fondo.webp);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     margin: 0 auto;
-    font-family: 'Lato';
+    font-family: map-get($fuentes , "normal" );
     color: #333;
     display: flex;
     flex-direction: column;
@@ -19,17 +62,22 @@
     padding-bottom: 150px;
   }
   
+  h1{
+    font-family: map-get($fuentes , "titulob" );
+    font-size: 35px;
+    
+  }
   .navbar {
-    background-color: rgba(230, 149, 43, 0.689);
+    background-color: map-get($colores , "naranjat" );
   }
   
   .nav-link {
-    color: #fff !important;
+    color: map-get($colores , "blanco" ) !important;
     font-size: 20px;
     text-shadow: 0 0 5px #000;
   
     &:hover {
-      color: #000 !important;
+      color: map-get($colores , "negro" ) !important;
       font-weight: 300;
     }
   }
@@ -40,11 +88,12 @@
   
   h4 {
     text-align: center;
-    background-color: rgba(230, 149, 43, 0.689);
+    background-color: map-get($colores , "naranjat" );
     padding: 30px;
+    font-family: map-get($fuentes , "titulo" );
     font-size: 35px;
     font-weight: bold;
-    color: #fff;
+    color:  map-get($colores , "blanco" );
     text-shadow: 0 0 5px #000;
     margin-bottom: 20px;
   }
@@ -54,7 +103,7 @@
       height: 300px;
     }
   
-    background-color: rgba(230, 149, 43, 0.737);
+    background-color: map-get($colores , "naranjat" );
     color: #fff !important;
   
     &:hover {
@@ -62,15 +111,18 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
   
       h5 {
-        color: #000;
+        font-family: map-get($fuentes , "normalb" );
+        color: map-get($colores , "negro" );
         font-weight: bold;
       }
     }
   }
   
   .nleft {
-    opacity: 0.9;
-    background-size: cover;
+    opacity: 0.93 !important;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-color: #ffffff;
     background-position: center;
     height: 450px;
     margin-top: 60px;
@@ -78,39 +130,55 @@
   
   .nright {
     margin-top: 60px;
+    padding-top: 40px;
     background-color: rgba(12, 1, 1, 0.429);
-    color: #fff;
-  }
-  
-  .descripcion li {
-    font-size: 20px;
-  }
-  
-  .price {
-    font-size: 20px;
-    font-weight: 900;
-  }
-  
-  .btn-dark:hover {
-    color: rgb(230, 149, 43);
+    color: map-get($colores , "blanco" );
+    font-family: map-get($fuentes , "normal" );
+    
+    h2 {
+      font-family: map-get($fuentes , "titulob" );
+    }
+    h3{
+      font-family: map-get($fuentes , "normalb" );
+    }
+
+    .descripcion li{
+      font-size: 24px;
+    }
+    .price {
+      font-family: map-get($fuentes , "normalb" );
+      font-weight: 900;
+      font-size: 24px;
+    }
+    
+    .btn-dark:hover {
+      color: map-get($colores , "naranja" );
+      transform: scale(1.1) ;
+    }
+
   }
   
   #Contacto {
     form label {
       font-weight: 700;
-      color: #fff;
+      color: map-get($colores , "blanco" );
       font-size: 25px;
     }
   
     h2 {
+      font-family: map-get($fuentes , "titulo" );
       font-weight: 700;
-      color: #fff;
+      color: map-get($colores , "blanco" );
+    }
+    .btn-dark:hover {
+      color: rgb(230, 149, 43);
+      transform: scale(1.1) ;
     }
   }
   
   footer {
     background-color: rgba(0, 0, 0, 0.895);
-    color: #fff;
+    color: map-get($colores , "blanco" );
     width: 100%;
     padding: 15px;
     margin-top: 20px;
@@ -129,12 +197,12 @@
       }
   
       i {
-        color: orange;
+        color: map-get($colores , "naranja" );
         font-size: 40px;
         letter-spacing: 30px;
   
         &:hover {
-          color: #fff;
+          color: map-get($colores , "blanco" );
         }
       }
     }

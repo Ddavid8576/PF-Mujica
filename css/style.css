@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "VW Head Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/VWHeadRegular.woff) format("woff");
+}
+@font-face {
+  font-family: "VW Head Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/VWHeadBold.woff) format("woff");
+}
+@font-face {
+  font-family: "VW Text Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/VWTextRegular.woff) format("woff");
+}
+@font-face {
+  font-family: "VW Text Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/VWTextBold.woff) format("woff");
+}
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +29,12 @@
 }
 
 body {
-  background-image: url(../img/fondo.jpg);
+  background-image: url(../img/fondo.webp);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   margin: 0 auto;
-  font-family: "Lato";
+  font-family: "VW Text Regular";
   color: #333;
   display: flex;
   flex-direction: column;
@@ -19,8 +43,13 @@ body {
   padding-bottom: 150px;
 }
 
+h1 {
+  font-family: "VW Head Bold";
+  font-size: 35px;
+}
+
 .navbar {
-  background-color: rgba(230, 149, 43, 0.689);
+  background-color: rgba(230, 149, 43, 0.737);
 }
 
 .nav-link {
@@ -39,8 +68,9 @@ body {
 
 h4 {
   text-align: center;
-  background-color: rgba(230, 149, 43, 0.689);
+  background-color: rgba(230, 149, 43, 0.737);
   padding: 30px;
+  font-family: "VW Head Regular";
   font-size: 35px;
   font-weight: bold;
   color: #fff;
@@ -60,13 +90,16 @@ h4 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 .card:hover h5 {
+  font-family: "VW Text Bold";
   color: #000;
   font-weight: bold;
 }
 
 .nleft {
-  opacity: 0.9;
-  background-size: cover;
+  opacity: 0.93 !important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #ffffff;
   background-position: center;
   height: 450px;
   margin-top: 60px;
@@ -74,21 +107,28 @@ h4 {
 
 .nright {
   margin-top: 60px;
+  padding-top: 40px;
   background-color: rgba(12, 1, 1, 0.429);
   color: #fff;
+  font-family: "VW Text Regular";
 }
-
-.descripcion li {
-  font-size: 20px;
+.nright h2 {
+  font-family: "VW Head Bold";
 }
-
-.price {
-  font-size: 20px;
+.nright h3 {
+  font-family: "VW Text Bold";
+}
+.nright .descripcion li {
+  font-size: 24px;
+}
+.nright .price {
+  font-family: "VW Text Bold";
   font-weight: 900;
+  font-size: 24px;
 }
-
-.btn-dark:hover {
-  color: rgb(230, 149, 43);
+.nright .btn-dark:hover {
+  color: orange;
+  transform: scale(1.1);
 }
 
 #Contacto form label {
@@ -97,8 +137,13 @@ h4 {
   font-size: 25px;
 }
 #Contacto h2 {
+  font-family: "VW Head Regular";
   font-weight: 700;
   color: #fff;
+}
+#Contacto .btn-dark:hover {
+  color: rgb(230, 149, 43);
+  transform: scale(1.1);
 }
 
 footer {
