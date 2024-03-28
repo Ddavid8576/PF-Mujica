@@ -102,21 +102,25 @@ h4 {
   background-color: #ffffff;
   background-position: center;
   height: 450px;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .nright {
-  margin-top: 60px;
-  padding-top: 40px;
+  margin-top: 70px;
   background-color: rgba(12, 1, 1, 0.429);
   color: #fff;
   font-family: "VW Text Regular";
+  padding: 0%;
 }
 .nright h2 {
   font-family: "VW Head Bold";
+  text-align: center;
+  background-color: rgba(230, 149, 43, 0.737);
+  padding: 10px;
 }
 .nright h3 {
   font-family: "VW Text Bold";
+  padding-left: 30px;
 }
 .nright .descripcion li {
   font-size: 24px;
@@ -125,6 +129,10 @@ h4 {
   font-family: "VW Text Bold";
   font-weight: 900;
   font-size: 24px;
+  padding-left: 30px;
+}
+.nright .btn-dark {
+  margin-left: 30px;
 }
 .nright .btn-dark:hover {
   color: orange;
